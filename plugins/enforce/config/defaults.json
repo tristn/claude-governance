@@ -1,0 +1,6 @@
+{
+  "recursion_threshold": 20,
+  "main_branch_line_threshold": 20,
+  "cost_tracker_enabled": true,
+  "cost_tracker_log_path": ".claude/logs/cost-tracker.jsonl"
+}

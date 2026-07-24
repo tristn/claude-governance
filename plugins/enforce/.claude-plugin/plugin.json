@@ -1,0 +1,9 @@
+{
+  "name": "enforce",
+  "version": "0.1.0",
+  "description": "Mechanical enforcement governance for AI coding agents. Hooks, skills, and negative-constraint rules for safe, disciplined development.",
+  "author": {
+    "name": "tristn"
+  },
+  "homepage": "https://github.com/tristn/claude-governance"
+}

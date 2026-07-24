@@ -1,0 +1,16 @@
+# File patterns to protect from writes.
+# One glob pattern per line. Project can extend via
+# .claude/governance/protected-files.txt
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+id_rsa*
+id_ed25519*
+credentials.*
+*.env
+*.env.*
+.env.local
+.env.production

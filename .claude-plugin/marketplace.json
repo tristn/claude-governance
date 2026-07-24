@@ -1,0 +1,14 @@
+{
+  "name": "tristn-governance",
+  "owner": {
+    "name": "tristn"
+  },
+  "plugins": [
+    {
+      "name": "enforce",
+      "source": "./plugins/enforce",
+      "description": "Mechanical enforcement governance for AI coding agents. Hooks, skills, and negative-constraint rules.",
+      "version": "0.1.0"
+    }
+  ]
+}
