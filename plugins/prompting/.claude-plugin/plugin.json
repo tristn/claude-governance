@@ -1,0 +1,9 @@
+{
+  "name": "prompting",
+  "version": "1.0.0",
+  "description": "Prompt engineering subagents (prompt-generator, prompt-improver) and the /prompt command.",
+  "author": {
+    "name": "tristn"
+  },
+  "homepage": "https://github.com/tristn/claude-governance"
+}

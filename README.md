@@ -1,24 +1,30 @@
 # claude-governance
 
-Mechanical enforcement governance for AI coding agents. Hooks that
-block dangerous actions, skills that standardize workflows, and
-negative-constraint rules that keep agents disciplined.
+A Claude Code plugin marketplace with two plugins:
 
-Built for Claude Code. Designed to be installed once and work across
-all your projects.
+- **enforce** — mechanical enforcement governance: hooks that block
+  dangerous actions, skills that standardize workflows, and
+  negative-constraint rules that keep agents disciplined.
+- **prompting** — Anthropic Console's Prompt Generator / Prompt
+  Improver workflows as subagents, plus a `/prompt` router. See
+  [plugins/prompting/README.md](plugins/prompting/README.md).
+
+Designed to be installed once and work across all your projects.
 
 ## Install
 
 ```
 /plugin marketplace add tristn/claude-governance
+/plugin install enforce@tristn-governance
+/plugin install prompting@tristn-governance
 ```
 
-Or install from local path for development:
+Or add from a local path for development:
 ```
-/plugin add /path/to/claude-governance
+/plugin marketplace add /path/to/claude-governance
 ```
 
-## What you get
+## What enforce gives you
 
 ### Hooks (mechanical enforcement)
 
@@ -37,7 +43,6 @@ Or install from local path for development:
 |-------|-------------|
 | `/pr` | Ship a PR: validate branch, push, create PR, CI, merge |
 | `/session-close` | End-of-session checklist: ship work, update docs, run tests, verify handoff |
-| `/session-start` | Read state, surface priorities, wait for direction |
 
 ### Rules (negative constraints)
 
@@ -74,6 +79,8 @@ Cherry-picked patterns (all MIT licensed):
 - Skill anatomy format: [agent-skills](https://github.com/addyosmani/agent-skills) by Addy Osmani
 - Destructive command blocking patterns: [claude-setup](https://github.com/buildingopen/claude-setup)
 - Sensitive file protection: [claude-setup](https://github.com/buildingopen/claude-setup)
+- `plugins/prompting/reference/metaprompt-full.md`: verbatim from the
+  [Anthropic cookbook metaprompt](https://platform.claude.com/cookbook/misc-metaprompt) (MIT)
 
 ## License
 
