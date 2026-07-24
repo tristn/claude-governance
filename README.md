@@ -7,16 +7,16 @@ A Claude Code plugin marketplace shipping two plugins: **enforce**, mechanical g
 
 ## Install
 
-```
-/plugin marketplace add tristn/claude-governance
-/plugin install enforce@tristn-governance
-/plugin install prompting@tristn-governance
+```bash
+claude plugin marketplace add tristn/claude-governance
+claude plugin install enforce@tristn-governance
+claude plugin install prompting@tristn-governance
 ```
 
 For local development, add the marketplace from a path instead:
 
-```
-/plugin marketplace add /path/to/claude-governance
+```bash
+claude plugin marketplace add /path/to/claude-governance
 ```
 
 ## enforce
@@ -59,7 +59,7 @@ Enforcement by mechanism, not prose. Hooks fire on tool events and block or warn
 | `prompt-improver` (agent) | Existing prompt in, diagnosed and restructured prompt out. Saves `*.improved.md` for reusable templates; returns inline for ephemeral prompts such as agent delegation handoffs |
 | `/prompt` (command) | Routes free-form requests to the right subagent |
 
-Both agents run `model: inherit`, so they follow your session model. For maximum prompt-craft quality regardless of session model, copy the agent into `~/.claude/agents/` and pin `model: opus` there. Details in [plugins/prompting/README.md](plugins/prompting/README.md).
+Both agents run `model: inherit`, so they follow your session model. For maximum prompt-craft quality regardless of session model, copy the agent into `~/.claude/agents/` and pin `model: opus` there.
 
 ## Configure and override
 

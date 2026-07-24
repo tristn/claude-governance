@@ -8,4 +8,4 @@ Full documentation: [root README](../../README.md) ·
 [Override Guide](docs/override-guide.md) ·
 [Skill anatomy](docs/skill-anatomy.md)
 
-Install: `/plugin install enforce@tristn-governance`
+Install: `claude plugin install enforce@tristn-governance`
