@@ -17,7 +17,11 @@ if echo "$CMD" | grep -qE '(cat|head|tail|less|more)\s+.*\.env'; then
 fi
 
 # Hard-coded: block dangerous git commands
-if echo "$CMD" | grep -qE 'git\s+push\s+.*(-f|--force)'; then
+# Force flags must be arguments OF the push itself: the gap never crosses
+# a command separator (& | ;), and the flag must be a whole token — else
+# "git push origin capture-first" or a later "-f" in an unrelated command
+# on the same line false-positives.
+if echo "$CMD" | grep -qE 'git\s+push[^&|;]*\s(-[a-zA-Z]*f[a-zA-Z]*|--force[^[:space:]]*)(\s|$)'; then
     echo '{"decision":"block","reason":"Force-push blocked by governance. Use git revert for pushed mistakes."}'
     exit 0
 fi
